@@ -3,9 +3,11 @@ public class MathUtils {
      * divideNumbers -- a / b
      * Divide a by b and return the result
      */
+
     public static double divideNumbers(int dividend, int divisor) {
+
         /* Do some casual division ... Super easy ... Shouldn't be any problems here */
-        double res = dividend / divisor;
+        double res = (double)dividend / (double)divisor;
         /* Return the DEFINITELY CORRECT result */
         return res;
     }
@@ -21,15 +23,15 @@ public class MathUtils {
         /* Determine if the exponent is negative */
         boolean isNegative = false;
         if (exp < 0) {
-            exp *= -1;
+            exp = exp * -1;
             isNegative = true;
         }
 
         /* Multiply the result by the base exp times
             Ex: base = 2, exp = 2
                --> res = 2, then res = 4 */
-        for (int i = 0; i < exp; i++) {
-           res *= base; 
+        for (int i = 1; i < exp; i++) {
+            res = res * base;
         }
 
         /* If it's a negative exponent, we should invert it! */
@@ -41,5 +43,5 @@ public class MathUtils {
         else {
             return res;
         }
-    }    
+    }
 }
